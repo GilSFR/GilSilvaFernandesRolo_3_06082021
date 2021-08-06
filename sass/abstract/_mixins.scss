@@ -1,6 +1,10 @@
-@mixin flexCenter {
+@mixin flexCenter-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: column;
+    padding: $padding-section;
+    gap: 2rem;   
 }
+
+

@@ -1,0 +1,55 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #353535;
+    width: 100%;
+    color: #ffffff;
+    padding: 2rem;
+    gap: 1rem;
+
+    @media screen and (min-width: 600px) { 
+       flex-direction: row;
+       gap: 2rem;
+       margin: 0 auto;
+       justify-content: space-around;
+    }
+
+    &__h1{
+        font-family: $fontTitres;
+        font-weight: 400;
+    }
+
+    &__icon-text {
+        display: flex;
+        padding-top: 0.7rem;
+
+        i {
+            font-size: 1.5rem;
+            width: 2rem;
+        }
+
+        p {
+            font-size: $font-size;
+            padding-left: 1rem;
+        }
+
+
+    }
+    &__text {
+        @media screen and (min-width: 600px) and (max-width: 1200px) { 
+            display: flex;
+            gap: 2rem;
+            padding-top: 0.7rem;    
+        }
+        p {
+            font-size: $font-size;
+            margin-bottom: 1rem;
+        }
+        a {
+            text-decoration: none;
+            font-size: $font-size;
+            color :#ffffff;
+        }
+    }
+}

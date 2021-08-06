@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/* --------------------------------- COLORS --------------------------------- */
+/* ---------------------------------- FONTS --------------------------------- */
+/* ---------------------------------- SIZES --------------------------------- */
 /* --------------------------------- QUERIES -------------------------------- */
 @keyframes white_page {
   0% {
@@ -27,6 +31,11 @@
 }
 html {
   font-size: 62.5%;
+}
+@media screen and (max-width: 200px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 * {
@@ -67,52 +76,90 @@ a {
 }
 
 .btn {
+  position: relative;
   text-decoration: none;
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: bolder;
-  color: white;
-  border-radius: 10rem;
   padding: 1.5rem 2.5rem;
   border: none;
-  transition: all 0.2s;
   box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.15);
+  /* ------------------- Button gradient for section-explore ------------------ */
+  /* --------------- Button fonctionnement section-fonctionement -------------- */
 }
-.btn:hover {
-  transform: translateY(-0.2rem);
-  opacity: 0.8;
-}
-.btn:active {
-  transform: translateY(0.2rem);
+.btn:hover, .btn:active {
+  background-color: #f5edff;
   box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
 }
+.btn:hover .btn__icon {
+  color: #9356DC;
+}
 .btn--gradient {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  color: white;
+  border-radius: 10rem;
+}
+.btn--gradient:hover, .btn--gradient:active {
+  opacity: 0.8;
+}
+.btn__fontionnement {
+  background-color: #f6f6f6;
+  border-radius: 1.3rem;
+  width: 100%;
+  max-width: 30rem;
+  text-align: start;
+}
+.btn__fontionnement > div {
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: absolute;
+  top: 32%;
+  left: -4%;
+  width: 2.1rem;
+  height: 2.1rem;
+}
+@media screen and (max-width: 200px) {
+  .btn__fontionnement > div {
+    top: -10%;
+    left: 40%;
+  }
+}
+.btn__numero-box {
+  position: relative;
+}
+.btn__numero {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.67rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #FFF;
+}
+.btn__icon {
+  font-size: 2rem;
+  color: #797979;
+  padding-right: 3rem;
+}
+@media screen and (max-width: 200px) {
+  .btn__icon {
+    display: none;
+  }
+}
+.btn__paragraphe {
+  width: 17rem;
 }
 
 .separation-bar {
   width: 100%;
   height: 0.6rem;
-  background: linear-gradient(180deg, #bdbdbd 24%, #ececec 79%);
+  background: linear-gradient(180deg, #cecece 20%, #eaeaea 79%);
 }
 
 .section-paris {
-  background-color: #ededed;
+  background-color: #eaeaea;
 }
 
-.form {
-  /* &__paragraphe-box { 
-
-  }
-
-  &__paragraphe {
-
-
-  } */
-}
 .form__group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.5rem;
   height: 3.5rem;
   margin: 0 auto;
@@ -153,12 +200,213 @@ a {
   visibility: hidden;
 }
 
+.heading-primary {
+  width: 100%;
+}
+.heading-primary__h1 {
+  font-size: 2rem;
+  font-family: "roboto-black";
+}
+.heading-primary__h1--center {
+  text-align: center;
+}
+.heading-primary__h1--left {
+  text-align: left;
+}
+@media screen and (min-width: 600px) {
+  .heading-primary__h1--left {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 200px) {
+  .heading-primary__h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.heading-secondary {
+  width: 100%;
+}
+.heading-secondary__h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: "roboto-light";
+  color: #797979;
+}
+
+.article-restaurant {
+  width: 100%;
+  max-width: 38rem;
+  height: 20rem;
+  background-color: #FFF;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.restaurant__img-box {
+  position: relative;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 14rem;
+  /* -------------------------- Card Bacground images ------------------------- */
+}
+@media screen and (max-width: 200px) {
+  .restaurant__img-box {
+    height: 8rem;
+  }
+}
+.restaurant__img-box--1 {
+  background-image: url("/images/restaurants/mobile/La-palette-du-gout.jpg");
+}
+.restaurant__img-box--2 {
+  background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
+}
+.restaurant__img-box--3 {
+  background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
+}
+.restaurant__img-box--3 p {
+  display: none;
+}
+.restaurant__img-box--4 {
+  background-image: url("/images/restaurants/mobile/Le-délisse-des-sens.jpg");
+}
+.restaurant__img-box--4 p {
+  display: none;
+}
+.restaurant__img-box--paragraphe {
+  display: block;
+  font-size: 1.3rem;
+  font-family: "roboto-black";
+  color: #008766;
+  text-align: center;
+  line-height: 2.2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  width: 7rem;
+  height: 2.3rem;
+  background-color: #99e2d0;
+}
+@media screen and (max-width: 200px) {
+  .restaurant__img-box--paragraphe {
+    display: none;
+  }
+}
+
+.restaurant__mix-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mix-box__text {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  padding-left: 1.5rem;
+}
+@media screen and (max-width: 200px) {
+  .mix-box__text {
+    padding: 0;
+  }
+}
+.mix-box__text--h2 {
+  margin: 1rem auto;
+  font-size: 1.7rem;
+  font-family: "roboto-black";
+}
+.mix-box__text--p {
+  margin: -0.5rem auto;
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+
+.mix-box__icon {
+  position: relative;
+  width: 10%;
+  font-size: 2rem;
+}
+@media screen and (max-width: 200px) {
+  .mix-box__icon {
+    display: none;
+  }
+}
+.mix-box__icon--vide {
+  font-size: 2.1rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+.mix-box__icon--plein {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: -20;
+  background-image: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .header {
   height: 6rem;
   width: 100%;
 }
 .header__logo {
   width: 15rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  width: 100%;
+  color: #ffffff;
+  padding: 2rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+}
+.footer__h1 {
+  font-family: "Shrikhand-Regular";
+  font-weight: 400;
+}
+.footer__icon-text {
+  display: flex;
+  padding-top: 0.7rem;
+}
+.footer__icon-text i {
+  font-size: 1.5rem;
+  width: 2rem;
+}
+.footer__icon-text p {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .footer__text {
+    display: flex;
+    gap: 2rem;
+    padding-top: 0.7rem;
+  }
+}
+.footer__text p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer__text a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -169,22 +417,52 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 4rem 3rem;
+  padding: 3rem 2rem;
   gap: 2rem;
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
 }
 
-.heading-primary__h1 {
-  text-align: center;
-  font-size: 2rem;
-  font-family: "roboto-black";
+.section-fonctionement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  gap: 2rem;
 }
 
-.heading-secondary__h2 {
-  text-align: center;
-  font-size: 1.7rem;
-  font-family: "roboto-light";
-  color: #797979;
+.section-restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 600px) {
+  .section-restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "gridT gridT " "grid1 grid2" "grid3 grid4";
+  }
+  .section-restaurants .grid.title {
+    grid-area: gridT;
+  }
+  .section-restaurants .grid1 {
+    grid-area: grid1;
+    margin-left: auto;
+  }
+  .section-restaurants .grid2 {
+    grid-area: grid2;
+  }
+  .section-restaurants .grid3 {
+    grid-area: grid3;
+    margin-left: auto;
+  }
+  .section-restaurants .grid4 {
+    grid-area: grid4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

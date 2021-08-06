@@ -1,5 +1,9 @@
 html {
 font-size: 62.5%;   
+
+    @media screen and (max-width: 200px) { 
+        font-size: 50%
+}
 }
 
 * {

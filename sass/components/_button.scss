@@ -1,34 +1,94 @@
 .btn {
-        text-decoration: none;
-        font-size: $font-size ;
-        font-weight: bolder;
-        color: white;
-        
-        border-radius: 10rem;
-        padding: 1.5rem 2.5rem;
-        border:none;
-        
-        transition: all .2s;
-        box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 15%);
-        
+    position: relative;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: $font-size ;
+    font-weight: bolder;
+
+    padding: 1.5rem 2.5rem;
     
+    border:none;
+    box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 15%);
 
-    &:hover {
-        transform: translateY(-.2rem);
-        opacity: 0.8;
-        
-
-    }
-
+    &:hover,
     &:active {
-        transform: translateY(.2rem);
+        background-color: #f5edff;
         box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 50%);
-
     }
 
+    //mettre l icon en violet au survol
+    &:hover &__icon {
+        color: $primaire;
+    }
+
+
+    /* ------------------- Button gradient for section-explore ------------------ */
     &--gradient {
         background: $gradient;
+        color: white;
+        border-radius: 10rem;
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+       
     }
 
+    /* --------------- Button fonctionnement section-fonctionement -------------- */
+    &__fontionnement{
+        background-color: $grey-background;
+        border-radius: 1.3rem;
+        width: 100%;
+        max-width: 30rem;
+        text-align: start;     
+
+
+        & > div{
+            background-color: $primaire;
+            border-radius: 50%;
+            position: absolute;
+            top: 32%;
+            left: -4%;
+            width: 2.1rem;
+            height: 2.1rem;
+
+           @media screen and (max-width: 200px) { 
+                top: -10%;
+                left: 40%;
+            }
+        }
+        
+    }
+
+    &__numero-box {
+        position: relative;
+    }
+
+    &__numero{
+        position: absolute;
+        top: 0.2rem;
+        left: .67rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: $white;
+        
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color : $grey-text;
+        padding-right: 3rem;
+        @media screen and (max-width: 200px) { 
+            display: none;
+        }
+        
+    }
+
+    &__paragraphe {
+        width:17rem;
+        
+        
+    }
 
 }
+

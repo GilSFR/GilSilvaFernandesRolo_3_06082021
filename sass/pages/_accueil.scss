@@ -3,29 +3,53 @@
 /* -------------------------------------------------------------------------- */
 
 .section-explore {
-    @include flexCenter;
-    flex-direction: column;
-    padding: $padding-section;
-    gap: 2rem;
+    @include flexCenter-section;
     background-color: $grey-background;
 }
 
-    .heading-primary {
-        
-        &__h1 {
-            text-align: center;
-            font-size:$font-size-h1;
-            font-family: $font-texte-black;
-        }
-    }
+    
 
-    .heading-secondary {
 
-        &__h2 {
-            text-align: center;
-            font-size: $font-size-h2;
-            font-family: $font-texte-light;
-            color: $grey-text;
+.section-fonctionement {
+    @include flexCenter-section;
+    
+
+}
+
+.section-restaurants{
+    @include flexCenter-section;
+    background-color: $grey-background;
+    
+    
+        @media screen and (min-width: 600px){
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "gridT gridT "
+            "grid1 grid2"
+            "grid3 grid4";
+       
+    
+    
+    
+        .grid.title {
+            grid-area: gridT;
             
+
         }
-    }
+        .grid1 {
+            grid-area: grid1;
+            margin-left: auto;
+        }
+        .grid2 {
+            grid-area: grid2;
+        }
+        .grid3 {
+            grid-area: grid3;
+            margin-left: auto;
+        }
+        .grid4 {
+            grid-area: grid4;
+        } 
+    }  
+}
