@@ -1,0 +1,32 @@
+$primaire : #9356DC;
+
+$secondaire : #ff79DA;
+
+$tertiaire : #99e2d0;
+
+$grey-light : #F6F6F6;
+$grey : #cccccc ;
+$grey-dark : #666; 
+
+$white : #FFF;
+
+$black : #000;
+
+$gradient:linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+
+$fontTexte : 'roboto';
+$fontTitres : 'Shrikhand-Regular';
+
+$fontsize : 1.5rem;
+
+$margin-top-small: 2rem ;
+$margin-top-medium: 4rem ;
+$margin-top-big: 6rem ;
+
+
+/* --------------------------------- QUERIES -------------------------------- */
+$breakpoints : (
+    mobile : 680px,
+    tablet : 1200px,
+    desktop: 4032px
+);

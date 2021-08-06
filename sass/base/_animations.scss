@@ -1,0 +1,26 @@
+@keyframes white_page {
+    0% {
+      visibility: visible;
+      opacity: 0.95;
+    }
+    70% {
+      opacity: 0.85;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes loader {
+    0% {
+      box-shadow: 0 0 0 0 #9356DC;
+      visibility: visible;
+    }
+    70% {
+      box-shadow: 0 0 0 50px #ff79DA;
+    }
+    100% {
+      box-shadow: 0 0 0 100px rgba(168, 63, 57, 0);
+      visibility: hidden;
+    }
+  }
