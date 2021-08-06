@@ -9,6 +9,10 @@ font-size: 62.5%;
 }
 
 body {
-    font-family: "roboto";
+    font-family: $font-texte-normal;
     color:black;
+}
+
+a{
+    text-decoration: none;
 }
