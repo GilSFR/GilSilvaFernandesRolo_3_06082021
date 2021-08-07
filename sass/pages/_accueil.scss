@@ -24,19 +24,16 @@
     @include flexCenter-section;
     background-color: $grey-background;
 
-    
-    
+    @media screen and (min-width: 600px){
+        display: grid; 
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: 
+        "gridtitle gridtitle "
+        "grid1 grid2"
+        "grid3 grid4";
 
-        @media screen and (min-width: 600px){
-            display: grid; 
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-            "gridT gridT "
-            "grid1 grid2"
-            "grid3 grid4";
-
-        .grid.title {
-            grid-area: gridT;
+        .gridtitle {
+            grid-area: gridtitle;
         }
         .grid1 {
             grid-area: grid1;
