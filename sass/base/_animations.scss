@@ -24,3 +24,37 @@
       visibility: hidden;
     }
   }
+
+  @keyframes check {
+    from {
+      visibility: visible;
+      width: 1rem;
+    }
+    to {
+      width: 7rem ;
+    }
+  }
+
+  @keyframes prix {
+    from 
+    {
+      transform:translateX(3rem);
+    }
+    to
+    {
+      transform: translateX(0rem);
+    }
+  }
+  @keyframes rotate {
+    from {
+      visibility: visible;
+      transform: rotate(-360deg);
+    }
+    50%{
+      transform: rotate(-180deg);
+    }
+    to {
+      transform: rotate(0deg);
+      visibility: visible;
+    }
+  }

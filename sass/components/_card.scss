@@ -1,6 +1,6 @@
-/* -------------------------------------------------------------------------- */
-/*                             articles Restaurant                             */
-/* -------------------------------------------------------------------------- */
+
+/* --------------------------- articles Restaurant -------------------------- */
+
 
 .article-restaurant {
     width: 100%;
@@ -14,7 +14,10 @@
     background-color: $white;
 }
 
-.restaurant__img-box {
+
+/* ---------------------------------- Card ---------------------------------- */
+
+.img-box {
     position: relative;
     width: 100%;
     height: 14rem;
@@ -30,38 +33,44 @@
 
     /* -------------------------- Card Background images ------------------------- */
 
-    &--1{
+    &__img1{
         background-image: url("/images/restaurants/mobile/La-palette-du-gout.jpg");
     }
-    &--2{
+    &__img2{
         background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
+        background-position: 50% 60%;
     }
-    &--3{
+    &__img3{
         background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
         p {
             display: none;
         }
     }
-    &--4{
+    &__img4{
         background-image: url("/images/restaurants/mobile/Le-délisse-des-sens.jpg");
         p {
             display: none;
         }
     }
     
-    &--menu-palette {
+    /* ----------------------------- Menus palettes ----------------------------- */
+
+    &__menu-palette {
         width: 100%;
         height: 25rem;
-
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
-    
+        z-index: -1;
+
+        @media screen and (min-width: 600px) { 
+            background-position: center;
+        }
     }
-    
+
     /* -------------------------- Carré vert sur image -------------------------- */
 
-    &--paragraphe {
+    &__paragraphe {
         display: block;
         position: absolute;
         top: 1rem;
@@ -115,12 +124,18 @@
 
 /* ------------------------------- Icon coeur ------------------------------- */
 
-.mix-box__icon {
+.coeur {
     position: relative;
     width: 10%;
     font-size: 2rem;
 
-    &--vide {
+    &__titre {
+        position: relative;
+        width: 10%;
+        font-size: 2rem;
+    }
+
+    &__vide {
         font-size: 2.1rem;
         position: absolute;
         top: 1.5rem;
@@ -131,10 +146,17 @@
             position: absolute;
             top:7rem;
             right:1rem;
-         }
+        }
+        
+        &--menus {
+            height: 4rem;
+            top: 0.8rem;
+            right:1rem;
+            
+        }
     }
 
-    &--plein {
+    &__plein {
         position: absolute;
         top: 1.5rem;
         right:1rem;
@@ -144,11 +166,18 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        
         @media screen and (max-width: 200px) { 
             font-size: 1.5rem;
             position: absolute;
             top:7rem;
             right:1rem;
          }
+
+        &--menus {
+            height: 4rem;
+            top: 0.8rem;
+            right:1rem;
+        }
     }
 }
