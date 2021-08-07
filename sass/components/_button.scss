@@ -1,12 +1,14 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Buttons                                  */
+/* -------------------------------------------------------------------------- */
+
 .btn {
     position: relative;
     text-decoration: none;
     font-family: inherit;
     font-size: $font-size ;
     font-weight: bolder;
-
     padding: 1.5rem 2.5rem;
-    
     border:none;
     box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 15%);
 
@@ -21,27 +23,27 @@
         color: $primaire;
     }
 
-
     /* ------------------- Button gradient for section-explore ------------------ */
+
     &--gradient {
         background: $gradient;
         color: white;
         border-radius: 10rem;
+
         &:hover,
         &:active {
             opacity: 0.8;
         }
-       
     }
 
     /* --------------- Button fonctionnement section-fonctionement -------------- */
+
     &__fontionnement{
         background-color: $grey-background;
         border-radius: 1.3rem;
         width: 100%;
         max-width: 30rem;
         text-align: start;     
-
 
         & > div{
             background-color: $primaire;
@@ -57,7 +59,6 @@
                 left: 40%;
             }
         }
-        
     }
 
     &__numero-box {
@@ -71,7 +72,6 @@
         font-size: 1.5rem;
         font-weight: normal;
         color: $white;
-        
     }
 
     &__icon {
@@ -81,14 +81,10 @@
         @media screen and (max-width: 200px) { 
             display: none;
         }
-        
     }
 
     &__paragraphe {
         width:17rem;
-        
-        
     }
-
 }
 

@@ -7,20 +7,26 @@
     background-color: $grey-background;
 }
 
-    
-
+/* -------------------------------------------------------------------------- */
+/*                           Section fonctionnement                           */
+/* -------------------------------------------------------------------------- */
 
 .section-fonctionement {
     @include flexCenter-section;
-    
-
 }
 
+/* -------------------------------------------------------------------------- */
+/*                             Section restaurants                            */
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------------- components//card --------------------------- */
 .section-restaurants{
     @include flexCenter-section;
     background-color: $grey-background;
+
     
     
+
         @media screen and (min-width: 600px){
             display: grid; 
             grid-template-columns: 1fr 1fr;
@@ -28,14 +34,9 @@
             "gridT gridT "
             "grid1 grid2"
             "grid3 grid4";
-       
-    
-    
-    
+
         .grid.title {
             grid-area: gridT;
-            
-
         }
         .grid1 {
             grid-area: grid1;
@@ -53,3 +54,4 @@
         } 
     }  
 }
+
