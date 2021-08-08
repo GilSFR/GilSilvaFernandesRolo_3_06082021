@@ -23,10 +23,11 @@
         color: $primaire;
     }
 
-    /* ------------------- Button gradient for section-explore ------------------ */
+   /* ----------------------------- Button gradient ---------------------------- */
 
     &__gradient {
         background: $gradient;
+        height: 5rem;
         color: white;
         border-radius: 10rem;
 
@@ -36,12 +37,9 @@
         }
 
         &--menus {
-            width: 60%;
-            margin: auto;
-            margin-top: 3rem;
-            margin-bottom : 3rem;
+            width: 18rem;
+            margin: 4rem auto;
         }
-
 
     }
 
@@ -81,6 +79,10 @@
         width: 100%;
         max-width: 40rem;
         overflow: hidden;
+        @media screen and (min-width: 400px) {
+            margin: 2rem auto;
+            
+        }
         
         &:hover &--check {
             animation: check .2s linear  forwards;
@@ -107,7 +109,7 @@
             transform: translateX(3rem);
             @media screen and (max-width: 300px) { 
                 padding-right: 0%;
-                transform: translateX(1.5rem);
+                transform: translateX(0.5rem);
             }
         }
 
@@ -124,6 +126,13 @@
             @media screen and (max-width: 300px) { 
                 height: 8rem;
             }
+        }
+
+        &--white-circle {
+            width:20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
         }
 
         &--check-icon {

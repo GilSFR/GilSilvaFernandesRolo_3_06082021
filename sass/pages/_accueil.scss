@@ -1,4 +1,23 @@
 /* -------------------------------------------------------------------------- */
+/*                                section-paris                               */
+/* -------------------------------------------------------------------------- */
+
+.section-paris { 
+    background-color: #eaeaea;
+
+    &__group {
+        font-size: $font-size;
+        height: 3.5rem;
+        margin: 0 auto;
+    }
+    
+    &__icon {
+        height: 1.5rem;
+        margin-right: 0.8rem;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
 /*                               Section Explore                              */
 /* -------------------------------------------------------------------------- */
 
@@ -22,33 +41,18 @@
 /* ----------------------------- components//card --------------------------- */
 .section-restaurants{
     @include flexCenter-section;
+    @include grid-accueil-restaurants;
     background-color: $grey-background;
-
-    @media screen and (min-width: 600px){
-        display: grid; 
-        grid-template-columns: repeat(2,50%);
-        grid-template-areas: 
-        "gridtitle gridtitle "
-        "grid1 grid2"
-        "grid3 grid4";
-
-        .gridtitle {
-            grid-area: gridtitle;
-        }
-        .grid1 {
-            grid-area: grid1;
-            margin-left: auto;
-        }
-        .grid2 {
-            grid-area: grid2;
-        }
-        .grid3 {
-            grid-area: grid3;
-            margin-left: auto;
-        }
-        .grid4 {
-            grid-area: grid4;
-        } 
-    }  
 }
 
+/* --------------------------- articles Restaurant -------------------------- */
+
+.article-restaurant {
+    height: 20rem;
+    width: 100%;
+    max-width: 38rem;
+    overflow: hidden;
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 50%);
+}

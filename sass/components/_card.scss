@@ -1,31 +1,13 @@
 
-/* --------------------------- articles Restaurant -------------------------- */
-
-
-.article-restaurant {
-    width: 100%;
-    max-width: 38rem;
-    height: 20rem;
-    overflow: hidden;
-
-    border-radius: 15px;
-    box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 50%);
-
-    background-color: $white;
-}
-
-
 /* ---------------------------------- Card ---------------------------------- */
 
-.img-box {
+.card {
     position: relative;
     width: 100%;
     height: 14rem;
-
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    
 
     @media screen and (max-width: 200px) { 
         height: 10rem;
@@ -39,7 +21,8 @@
     &__img2{
         background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
         background-position: 50% 60%;
-    }
+        
+    }   
     &__img3{
         background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
         p {
@@ -64,6 +47,9 @@
         z-index: -1;
 
         @media screen and (min-width: 600px) { 
+            background-position: center;   
+        }
+        &--menus{
             background-position: center;
         }
     }
@@ -75,109 +61,44 @@
         position: absolute;
         top: 1rem;
         right: 1.5rem;
-
+        height: 2.3rem;
+        width : 7rem;
+        text-align: center;
         font-size: 1.3rem;
         font-family: $font-texte-black;
-        text-align: center;
         line-height: 2.2rem;
-
-        width : 7rem;
-        height: 2.3rem;
-
         background-color: $tertiaire;
         color: rgb(0, 135, 102);
-
     }
-}
 
 /* ---------------------------- Texte sous image ---------------------------- */
+    &__mix-box {
+        display: flex;
+        justify-content: space-between;
+        color: black;
 
-.restaurant__mix-box {
-    display: flex;
-    justify-content: space-between;
-    color: black;
-}
+        &--text {
+            display: flex;
+            flex-direction: column;
+            height: 6rem;
+            padding-left: 1.5rem;
 
-.mix-box__text {
-    display: flex;
-    flex-direction: column;
-    height: 6rem;
-    padding-left: 1.5rem;
+            @media screen and (max-width: 200px) { 
+            padding: 0;
+            }
 
-    @media screen and (max-width: 200px) { 
-       padding: 0;
-    }
+            &--h2 {
+            margin: 1rem auto;
+            font-size: $font-size-h2; 
+            font-family: $font-texte-black; 
+            }
 
-    &--h2 {
-    margin: 1rem auto;
-    
-    font-size: $font-size-h2; 
-    font-family: $font-texte-black; 
-    }
-
-    &--p{
-        margin: -0.5rem auto;
-        margin-left: 0;
-        font-size: $font-size;
-    }
-}
-
-/* ------------------------------- Icon coeur ------------------------------- */
-
-.coeur {
-    position: relative;
-    width: 10%;
-    font-size: 2rem;
-
-    &__titre {
-        position: relative;
-        width: 10%;
-        font-size: 2rem;
-    }
-
-    &__vide {
-        font-size: 2.1rem;
-        position: absolute;
-        top: 1.5rem;
-        right:1rem;
-        
-        @media screen and (max-width: 200px) { 
-            font-size: 1.5rem;
-            position: absolute;
-            top:7rem;
-            right:1rem;
-        }
-        
-        &--menus {
-            height: 4rem;
-            top: 0.8rem;
-            right:1rem;
-            
-        }
-    }
-
-    &__plein {
-        position: absolute;
-        top: 1.5rem;
-        right:1rem;
-        z-index: -20;
-        background-image:$gradient;
-        display: inline-block;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        
-        @media screen and (max-width: 200px) { 
-            font-size: 1.5rem;
-            position: absolute;
-            top:7rem;
-            right:1rem;
-         }
-
-        &--menus {
-            height: 4rem;
-            top: 0.8rem;
-            right:1rem;
+            &--p{
+                margin: -0.5rem auto;
+                margin-left: 0;
+                font-size: $font-size;
+            }
         }
     }
 }
+

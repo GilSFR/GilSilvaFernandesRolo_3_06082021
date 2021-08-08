@@ -1,8 +1,11 @@
 @charset "UTF-8";
+/* ------------------------------ acceuil mixin ----------------------------- */
+/* ------------------------------- Menus mixin ------------------------------ */
 /* --------------------------------- COLORS --------------------------------- */
 /* ---------------------------------- FONTS --------------------------------- */
 /* ---------------------------------- SIZES --------------------------------- */
 /* --------------------------------- QUERIES -------------------------------- */
+/* --------------------------- Loader page accueil -------------------------- */
 @keyframes white_page {
   0% {
     visibility: visible;
@@ -29,6 +32,7 @@
     visibility: hidden;
   }
 }
+/* ----------------- check the button on hover in the menus ----------------- */
 @keyframes check {
   from {
     visibility: visible;
@@ -59,6 +63,77 @@
     visibility: visible;
   }
 }
+/* -------------------------- Menu Appears in menus ------------------------- */
+@keyframes menu-appears {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-appears {
+  opacity: 0;
+  animation: menu-appears 0.5s ease-in 0s forwards;
+}
+
+delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+}
+
+.delay-5 {
+  animation-delay: 1s;
+}
+
+.delay-6 {
+  animation-delay: 1.2s;
+}
+
+.delay-7 {
+  animation-delay: 1.4s;
+}
+
+.delay-8 {
+  animation-delay: 1.6s;
+}
+
+.delay-9 {
+  animation-delay: 1.8s;
+}
+
+.delay-10 {
+  animation-delay: 2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +152,11 @@ html {
   html {
     font-size: 50%;
   }
+}
+
+body {
+  max-width: 1600px;
+  margin: auto;
 }
 
 @font-face {
@@ -113,7 +193,7 @@ html {
   padding: 1.5rem 2.5rem;
   border: none;
   box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.15);
-  /* ------------------- Button gradient for section-explore ------------------ */
+  /* ----------------------------- Button gradient ---------------------------- */
   /* ---------------------------------- menus --------------------------------- */
   /* ------------------- Numeros dans les bouttons d'accueil ------------------ */
 }
@@ -126,6 +206,7 @@ html {
 }
 .btn__gradient {
   background: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  height: 5rem;
   color: white;
   border-radius: 10rem;
 }
@@ -133,10 +214,8 @@ html {
   opacity: 0.8;
 }
 .btn__gradient--menus {
-  width: 60%;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 18rem;
+  margin: 4rem auto;
 }
 .btn__default {
   background-color: #f6f6f6;
@@ -172,6 +251,11 @@ html {
   max-width: 40rem;
   overflow: hidden;
 }
+@media screen and (min-width: 400px) {
+  .btn__menus {
+    margin: 2rem auto;
+  }
+}
 .btn__menus:hover .btn__menus--check {
   animation: check 0.2s linear forwards;
 }
@@ -194,7 +278,7 @@ html {
 @media screen and (max-width: 300px) {
   .btn__menus--prix {
     padding-right: 0%;
-    transform: translateX(1.5rem);
+    transform: translateX(0.5rem);
   }
 }
 .btn__menus--check {
@@ -211,6 +295,12 @@ html {
   .btn__menus--check {
     height: 8rem;
   }
+}
+.btn__menus--white-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
 }
 .btn__menus--check-icon {
   font-size: 1.3rem;
@@ -257,51 +347,6 @@ html {
   background: linear-gradient(180deg, #cecece 20%, #eaeaea 79%);
 }
 
-.section-paris {
-  background-color: #eaeaea;
-}
-
-.form__group {
-  font-size: 1.5rem;
-  height: 3.5rem;
-  margin: 0 auto;
-}
-.form__icon {
-  height: 1.5rem;
-  margin-right: 0.8rem;
-}
-
-.loader {
-  /* here the background color opacitiy and visibility timing */
-  height: 100%;
-  background: white;
-  margin: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  animation: white_page 3s linear;
-  visibility: hidden;
-  /* Circle animation pulse and colors */
-}
-.loader__animation {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background: radial-gradient(circle 80px, #9356DC, #ff79DA);
-  margin: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: loader 1s linear 3;
-  z-index: 2;
-  visibility: hidden;
-}
-
 .heading-primary {
   width: 100%;
 }
@@ -327,6 +372,12 @@ html {
   font-weight: 500;
   font-size: 2.4rem;
   padding-left: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .heading-primary__h1--title {
+    width: fit-content;
+    margin-left: 40%;
+  }
 }
 @media screen and (max-width: 200px) {
   .heading-primary__h1 {
@@ -361,6 +412,14 @@ html {
   background-color: #99e2d0;
   bottom: -4px;
 }
+@media screen and (min-width: 1200px) {
+  .heading-secondary__h2--menus {
+    text-align: center;
+  }
+  .heading-secondary__h2--menus::after {
+    display: none;
+  }
+}
 
 .heading-terciary__h3-para {
   display: flex;
@@ -388,19 +447,8 @@ html {
   overflow: hidden;
 }
 
-/* --------------------------- articles Restaurant -------------------------- */
-.article-restaurant {
-  width: 100%;
-  max-width: 38rem;
-  height: 20rem;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
-  background-color: #FFF;
-}
-
 /* ---------------------------------- Card ---------------------------------- */
-.img-box {
+.card {
   position: relative;
   width: 100%;
   height: 14rem;
@@ -410,32 +458,33 @@ html {
   /* -------------------------- Card Background images ------------------------- */
   /* ----------------------------- Menus palettes ----------------------------- */
   /* -------------------------- Carré vert sur image -------------------------- */
+  /* ---------------------------- Texte sous image ---------------------------- */
 }
 @media screen and (max-width: 200px) {
-  .img-box {
+  .card {
     height: 10rem;
   }
 }
-.img-box__img1 {
+.card__img1 {
   background-image: url("/images/restaurants/mobile/La-palette-du-gout.jpg");
 }
-.img-box__img2 {
+.card__img2 {
   background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
   background-position: 50% 60%;
 }
-.img-box__img3 {
+.card__img3 {
   background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
 }
-.img-box__img3 p {
+.card__img3 p {
   display: none;
 }
-.img-box__img4 {
+.card__img4 {
   background-image: url("/images/restaurants/mobile/Le-délisse-des-sens.jpg");
 }
-.img-box__img4 p {
+.card__img4 p {
   display: none;
 }
-.img-box__menu-palette {
+.card__menu-palette {
   width: 100%;
   height: 25rem;
   background-position: bottom;
@@ -444,49 +493,49 @@ html {
   z-index: -1;
 }
 @media screen and (min-width: 600px) {
-  .img-box__menu-palette {
+  .card__menu-palette {
     background-position: center;
   }
 }
-.img-box__paragraphe {
+.card__menu-palette--menus {
+  background-position: center;
+}
+.card__paragraphe {
   display: block;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
+  height: 2.3rem;
+  width: 7rem;
+  text-align: center;
   font-size: 1.3rem;
   font-family: "roboto-black";
-  text-align: center;
   line-height: 2.2rem;
-  width: 7rem;
-  height: 2.3rem;
   background-color: #99e2d0;
   color: #008766;
 }
-
-/* ---------------------------- Texte sous image ---------------------------- */
-.restaurant__mix-box {
+.card__mix-box {
   display: flex;
   justify-content: space-between;
   color: black;
 }
-
-.mix-box__text {
+.card__mix-box--text {
   display: flex;
   flex-direction: column;
   height: 6rem;
   padding-left: 1.5rem;
 }
 @media screen and (max-width: 200px) {
-  .mix-box__text {
+  .card__mix-box--text {
     padding: 0;
   }
 }
-.mix-box__text--h2 {
+.card__mix-box--text--h2 {
   margin: 1rem auto;
   font-size: 1.7rem;
   font-family: "roboto-black";
 }
-.mix-box__text--p {
+.card__mix-box--text--p {
   margin: -0.5rem auto;
   margin-left: 0;
   font-size: 1.5rem;
@@ -502,6 +551,11 @@ html {
   position: relative;
   width: 10%;
   font-size: 2rem;
+}
+@media screen and (min-width: 1600px) {
+  .coeur__titre {
+    width: 3%;
+  }
 }
 .coeur__vide {
   font-size: 2.1rem;
@@ -547,6 +601,37 @@ html {
   right: 1rem;
 }
 
+.loader {
+  /* here the background color opacitiy and visibility timing */
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  animation: white_page 3s linear;
+  visibility: hidden;
+  /* Circle animation pulse and colors */
+}
+.loader__animation {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle 80px, #9356DC, #ff79DA);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: loader 1s linear 3;
+  z-index: 2;
+  visibility: hidden;
+}
+
 .header {
   position: relative;
   height: 6rem;
@@ -571,6 +656,7 @@ html {
   width: 100%;
   color: #ffffff;
   padding: 2rem;
+  padding-bottom: 4rem;
   gap: 1rem;
 }
 @media screen and (min-width: 600px) {
@@ -612,6 +698,22 @@ html {
   text-decoration: none;
   font-size: 1.5rem;
   color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                section-paris                               */
+/* -------------------------------------------------------------------------- */
+.section-paris {
+  background-color: #eaeaea;
+}
+.section-paris__group {
+  font-size: 1.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+}
+.section-paris__icon {
+  height: 1.5rem;
+  margin-right: 0.8rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -677,44 +779,85 @@ html {
   }
 }
 
+/* --------------------------- articles Restaurant -------------------------- */
+.article-restaurant {
+  height: 20rem;
+  width: 100%;
+  max-width: 38rem;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
+}
+
 .article {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 1rem;
+  width: 100%;
+  max-width: 100rem;
   margin-top: -5rem;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  max-width: 100rem;
+  padding: 2.5rem 1rem;
   background-color: #f6f6f6;
   border-radius: 3.5rem 3.5rem 0 0;
   z-index: 5;
+}
+@media screen and (min-width: 600px) {
+  .article {
+    padding: 0.8rem 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    max-width: 100%;
+    margin-top: 0rem;
+    padding: 0.8rem 1rem;
+  }
 }
 
 .box-title {
   display: flex;
   justify-self: start;
-  margin-bottom: 3rem;
   width: 100%;
   max-width: 40rem;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 600px) {
   .box-title {
     text-align: center;
     max-width: 100%;
+    margin-bottom: 0rem;
   }
 }
 
-.section-entrees {
-  width: 100%;
+/* --------------------------- Grid section menus --------------------------- */
+@media screen and (min-width: 400px) {
+  .section-menu__grid-menu {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-/* ----------------------------- cercle du check ---------------------------- */
-.white-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: white;
+@media screen and (min-width: 600px) {
+  .section-menu__grid-menu {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "entrees__grid plats__grid" "desserts__grid button-grid";
+  }
+  .section-menu__grid-menu .entrees__grid {
+    grid-area: entrees__grid;
+  }
+  .section-menu__grid-menu .plats__grid {
+    grid-area: plats__grid;
+  }
+  .section-menu__grid-menu .desserts__grid {
+    grid-area: desserts__grid;
+  }
+  .section-menu__grid-menu .button-grid {
+    grid-area: button-grid;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
