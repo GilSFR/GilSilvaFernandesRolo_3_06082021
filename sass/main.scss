@@ -9,16 +9,15 @@
 
 @import "components/button";
 @import "components/separationBar";
-@import "components/form";
-@import "components/loader";
 @import "components/headings";
 @import "components/card";
+@import "components/coeur";
 
+@import "layout/loader";
 @import "layout/header";
 @import "layout/footer";
 
 @import "pages/accueil";
-@import "pages/la-palette-du-gout";
-@import "pages/a-la-francaise";
+@import "pages/menu";
 
 

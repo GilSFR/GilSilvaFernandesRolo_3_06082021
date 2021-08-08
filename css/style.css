@@ -1,8 +1,11 @@
 @charset "UTF-8";
+/* ------------------------------ acceuil mixin ----------------------------- */
+/* ------------------------------- Menus mixin ------------------------------ */
 /* --------------------------------- COLORS --------------------------------- */
 /* ---------------------------------- FONTS --------------------------------- */
 /* ---------------------------------- SIZES --------------------------------- */
 /* --------------------------------- QUERIES -------------------------------- */
+/* --------------------------- Loader page accueil -------------------------- */
 @keyframes white_page {
   0% {
     visibility: visible;
@@ -29,6 +32,108 @@
     visibility: hidden;
   }
 }
+/* ----------------- check the button on hover in the menus ----------------- */
+@keyframes check {
+  from {
+    visibility: visible;
+    width: 1rem;
+  }
+  to {
+    width: 7rem;
+  }
+}
+@keyframes prix {
+  from {
+    transform: translateX(3rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+@keyframes rotate {
+  from {
+    visibility: visible;
+    transform: rotate(-360deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+}
+/* -------------------------- Menu Appears in menus ------------------------- */
+@keyframes menu-appears {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-appears {
+  opacity: 0;
+  animation: menu-appears 0.5s ease-in 0s forwards;
+}
+
+delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+}
+
+.delay-5 {
+  animation-delay: 1s;
+}
+
+.delay-6 {
+  animation-delay: 1.2s;
+}
+
+.delay-7 {
+  animation-delay: 1.4s;
+}
+
+.delay-8 {
+  animation-delay: 1.6s;
+}
+
+.delay-9 {
+  animation-delay: 1.8s;
+}
+
+.delay-10 {
+  animation-delay: 2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +152,11 @@ html {
   html {
     font-size: 50%;
   }
+}
+
+body {
+  max-width: 1600px;
+  margin: auto;
 }
 
 @font-face {
@@ -83,8 +193,9 @@ html {
   padding: 1.5rem 2.5rem;
   border: none;
   box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.15);
-  /* ------------------- Button gradient for section-explore ------------------ */
-  /* --------------- Button fonctionnement section-fonctionement -------------- */
+  /* ----------------------------- Button gradient ---------------------------- */
+  /* ---------------------------------- menus --------------------------------- */
+  /* ------------------- Numeros dans les bouttons d'accueil ------------------ */
 }
 .btn:hover, .btn:active {
   background-color: #f5edff;
@@ -93,22 +204,27 @@ html {
 .btn:hover .btn__icon {
   color: #9356DC;
 }
-.btn--gradient {
+.btn__gradient {
   background: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  height: 5rem;
   color: white;
   border-radius: 10rem;
 }
-.btn--gradient:hover, .btn--gradient:active {
+.btn__gradient:hover, .btn__gradient:active {
   opacity: 0.8;
 }
-.btn__fontionnement {
+.btn__gradient--menus {
+  width: 18rem;
+  margin: 4rem auto;
+}
+.btn__default {
   background-color: #f6f6f6;
-  border-radius: 1.3rem;
+  border-radius: 1.4rem;
   width: 100%;
   max-width: 30rem;
   text-align: start;
 }
-.btn__fontionnement > div {
+.btn__default > div {
   background-color: #9356DC;
   border-radius: 50%;
   position: absolute;
@@ -118,9 +234,86 @@ html {
   height: 2.1rem;
 }
 @media screen and (max-width: 200px) {
-  .btn__fontionnement > div {
+  .btn__default > div {
     top: -10%;
     left: 40%;
+  }
+}
+.btn__menus {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #FFF;
+  border-radius: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 0rem;
+  min-height: 6rem;
+  width: 100%;
+  max-width: 40rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 400px) {
+  .btn__menus {
+    margin: 2rem auto;
+  }
+}
+.btn__menus:hover .btn__menus--check {
+  animation: check 0.2s linear forwards;
+}
+.btn__menus:hover .btn__menus--check-icon {
+  animation: rotate 0.2s linear forwards;
+}
+.btn__menus:hover .btn__menus--prix {
+  animation: prix 0.3s forwards;
+}
+.btn__menus--prix {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.3rem;
+  height: 3.2rem;
+  padding-right: 2rem;
+  width: 3.95rem;
+  transform: translateX(3rem);
+}
+@media screen and (max-width: 300px) {
+  .btn__menus--prix {
+    padding-right: 0%;
+    transform: translateX(0.5rem);
+  }
+}
+.btn__menus--check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0rem;
+  min-height: 6.5rem;
+  background-color: #99e2d0;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 300px) {
+  .btn__menus--check {
+    height: 8rem;
+  }
+}
+.btn__menus--white-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+.btn__menus--check-icon {
+  font-size: 1.3rem;
+  visibility: hidden;
+  position: absolute;
+  top: 2.7rem;
+  left: 2.4rem;
+  color: #99e2d0;
+}
+@media screen and (max-width: 300px) {
+  .btn__menus--check-icon {
+    top: 3.3rem;
+    left: 2.3rem;
   }
 }
 .btn__numero-box {
@@ -154,18 +347,258 @@ html {
   background: linear-gradient(180deg, #cecece 20%, #eaeaea 79%);
 }
 
-.section-paris {
-  background-color: #eaeaea;
+.heading-primary {
+  width: 100%;
+}
+.heading-primary__h1 {
+  font-size: 2rem;
+  font-family: "roboto-black";
+}
+.heading-primary__h1--center {
+  text-align: center;
+}
+.heading-primary__h1--left {
+  text-align: left;
+}
+@media screen and (min-width: 600px) {
+  .heading-primary__h1--left {
+    text-align: center;
+  }
+}
+.heading-primary__h1--title {
+  width: 90%;
+  height: 4rem;
+  font-family: "Shrikhand-Regular";
+  font-weight: 500;
+  font-size: 2.4rem;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .heading-primary__h1--title {
+    width: fit-content;
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 200px) {
+  .heading-primary__h1 {
+    font-size: 1.5rem;
+  }
 }
 
-.form__group {
-  font-size: 1.5rem;
-  height: 3.5rem;
-  margin: 0 auto;
+.heading-secondary {
+  width: 100%;
 }
-.form__icon {
-  height: 1.5rem;
-  margin-right: 0.8rem;
+.heading-secondary__h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: "roboto-light";
+  color: #797979;
+}
+.heading-secondary__h2--menus {
+  position: relative;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: "roboto";
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.heading-secondary__h2--menus::after {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  display: block;
+  height: 2px;
+  background-color: #99e2d0;
+  bottom: -4px;
+}
+@media screen and (min-width: 1200px) {
+  .heading-secondary__h2--menus {
+    text-align: center;
+  }
+  .heading-secondary__h2--menus::after {
+    display: none;
+  }
+}
+
+.heading-terciary__h3-para {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  width: 80%;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.heading-terciary__h3-para h3 {
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.heading-terciary__h3-para p {
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: "roboto-light";
+  font-weight: 200;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* ---------------------------------- Card ---------------------------------- */
+.card {
+  position: relative;
+  width: 100%;
+  height: 14rem;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* -------------------------- Card Background images ------------------------- */
+  /* ----------------------------- Menus palettes ----------------------------- */
+  /* -------------------------- Carré vert sur image -------------------------- */
+  /* ---------------------------- Texte sous image ---------------------------- */
+}
+@media screen and (max-width: 200px) {
+  .card {
+    height: 10rem;
+  }
+}
+.card__img1 {
+  background-image: url("/images/restaurants/mobile/La-palette-du-gout.jpg");
+}
+.card__img2 {
+  background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
+  background-position: 50% 60%;
+}
+.card__img3 {
+  background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
+}
+.card__img3 p {
+  display: none;
+}
+.card__img4 {
+  background-image: url("/images/restaurants/mobile/Le-délisse-des-sens.jpg");
+}
+.card__img4 p {
+  display: none;
+}
+.card__menu-palette {
+  width: 100%;
+  height: 25rem;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+@media screen and (min-width: 600px) {
+  .card__menu-palette {
+    background-position: center;
+  }
+}
+.card__menu-palette--menus {
+  background-position: center;
+}
+.card__paragraphe {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  height: 2.3rem;
+  width: 7rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "roboto-black";
+  line-height: 2.2rem;
+  background-color: #99e2d0;
+  color: #008766;
+}
+.card__mix-box {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.card__mix-box--text {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  padding-left: 1.5rem;
+}
+@media screen and (max-width: 200px) {
+  .card__mix-box--text {
+    padding: 0;
+  }
+}
+.card__mix-box--text--h2 {
+  margin: 1rem auto;
+  font-size: 1.7rem;
+  font-family: "roboto-black";
+}
+.card__mix-box--text--p {
+  margin: -0.5rem auto;
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+
+/* ------------------------------- Icon coeur ------------------------------- */
+.coeur {
+  position: relative;
+  width: 10%;
+  font-size: 2rem;
+}
+.coeur__titre {
+  position: relative;
+  width: 10%;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1600px) {
+  .coeur__titre {
+    width: 3%;
+  }
+}
+.coeur__vide {
+  font-size: 2.1rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+@media screen and (max-width: 200px) {
+  .coeur__vide {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+  }
+}
+.coeur__vide--menus {
+  height: 4rem;
+  top: 0.8rem;
+  right: 1rem;
+}
+.coeur__plein {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: -20;
+  background-image: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media screen and (max-width: 200px) {
+  .coeur__plein {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+  }
+}
+.coeur__plein--menus {
+  height: 4rem;
+  top: 0.8rem;
+  right: 1rem;
 }
 
 .loader {
@@ -199,183 +632,21 @@ html {
   visibility: hidden;
 }
 
-.heading-primary {
-  width: 100%;
-}
-.heading-primary__h1 {
-  font-size: 2rem;
-  font-family: "roboto-black";
-}
-.heading-primary__h1--center {
-  text-align: center;
-}
-.heading-primary__h1--left {
-  text-align: left;
-}
-@media screen and (min-width: 600px) {
-  .heading-primary__h1--left {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 200px) {
-  .heading-primary__h1 {
-    font-size: 1.5rem;
-  }
-}
-
-.heading-secondary {
-  width: 100%;
-}
-.heading-secondary__h2 {
-  text-align: center;
-  font-size: 1.7rem;
-  font-family: "roboto-light";
-  color: #797979;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                             articles Restaurant                             */
-/* -------------------------------------------------------------------------- */
-.article-restaurant {
-  width: 100%;
-  max-width: 38rem;
-  height: 20rem;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
-  background-color: #FFF;
-}
-
-.restaurant__img-box {
-  position: relative;
-  width: 100%;
-  height: 14rem;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* -------------------------- Card Background images ------------------------- */
-  /* -------------------------- Carré vert sur image -------------------------- */
-}
-@media screen and (max-width: 200px) {
-  .restaurant__img-box {
-    height: 10rem;
-  }
-}
-.restaurant__img-box--1 {
-  background-image: url("/images/restaurants/mobile/La-palette-du-gout.jpg");
-}
-.restaurant__img-box--2 {
-  background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
-}
-.restaurant__img-box--3 {
-  background-image: url("/images/restaurants/mobile/A-la-Francaise.jpg");
-}
-.restaurant__img-box--3 p {
-  display: none;
-}
-.restaurant__img-box--4 {
-  background-image: url("/images/restaurants/mobile/Le-délisse-des-sens.jpg");
-}
-.restaurant__img-box--4 p {
-  display: none;
-}
-.restaurant__img-box--menu-palette {
-  width: 100%;
-  height: 25rem;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.restaurant__img-box--paragraphe {
-  display: block;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 1.3rem;
-  font-family: "roboto-black";
-  text-align: center;
-  line-height: 2.2rem;
-  width: 7rem;
-  height: 2.3rem;
-  background-color: #99e2d0;
-  color: #008766;
-}
-
-/* ---------------------------- Texte sous image ---------------------------- */
-.restaurant__mix-box {
-  display: flex;
-  justify-content: space-between;
-  color: black;
-}
-
-.mix-box__text {
-  display: flex;
-  flex-direction: column;
-  height: 6rem;
-  padding-left: 1.5rem;
-}
-@media screen and (max-width: 200px) {
-  .mix-box__text {
-    padding: 0;
-  }
-}
-.mix-box__text--h2 {
-  margin: 1rem auto;
-  font-size: 1.7rem;
-  font-family: "roboto-black";
-}
-.mix-box__text--p {
-  margin: -0.5rem auto;
-  margin-left: 0;
-  font-size: 1.5rem;
-}
-
-/* ------------------------------- Icon coeur ------------------------------- */
-.mix-box__icon {
-  position: relative;
-  width: 10%;
-  font-size: 2rem;
-}
-.mix-box__icon--vide {
-  font-size: 2.1rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 1rem;
-}
-@media screen and (max-width: 200px) {
-  .mix-box__icon--vide {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 7rem;
-    right: 1rem;
-  }
-}
-.mix-box__icon--plein {
-  position: absolute;
-  top: 1.5rem;
-  right: 1rem;
-  z-index: -20;
-  background-image: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
-  display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-@media screen and (max-width: 200px) {
-  .mix-box__icon--plein {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 7rem;
-    right: 1rem;
-  }
-}
-
 .header {
+  position: relative;
   height: 6rem;
   width: 100%;
 }
 .header__logo {
   width: 15rem;
+}
+.header__arrow {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
 }
 
 .footer {
@@ -385,6 +656,7 @@ html {
   width: 100%;
   color: #ffffff;
   padding: 2rem;
+  padding-bottom: 4rem;
   gap: 1rem;
 }
 @media screen and (min-width: 600px) {
@@ -426,6 +698,22 @@ html {
   text-decoration: none;
   font-size: 1.5rem;
   color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                section-paris                               */
+/* -------------------------------------------------------------------------- */
+.section-paris {
+  background-color: #eaeaea;
+}
+.section-paris__group {
+  font-size: 1.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+}
+.section-paris__icon {
+  height: 1.5rem;
+  margin-right: 0.8rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -488,6 +776,87 @@ html {
   }
   .section-restaurants .grid4 {
     grid-area: grid4;
+  }
+}
+
+/* --------------------------- articles Restaurant -------------------------- */
+.article-restaurant {
+  height: 20rem;
+  width: 100%;
+  max-width: 38rem;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100rem;
+  margin-top: -5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1rem;
+  background-color: #f6f6f6;
+  border-radius: 3.5rem 3.5rem 0 0;
+  z-index: 5;
+}
+@media screen and (min-width: 600px) {
+  .article {
+    padding: 0.8rem 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    max-width: 100%;
+    margin-top: 0rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+.box-title {
+  display: flex;
+  justify-self: start;
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 600px) {
+  .box-title {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 0rem;
+  }
+}
+
+/* --------------------------- Grid section menus --------------------------- */
+@media screen and (min-width: 400px) {
+  .section-menu__grid-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 600px) {
+  .section-menu__grid-menu {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "entrees__grid plats__grid" "desserts__grid button-grid";
+  }
+  .section-menu__grid-menu .entrees__grid {
+    grid-area: entrees__grid;
+  }
+  .section-menu__grid-menu .plats__grid {
+    grid-area: plats__grid;
+  }
+  .section-menu__grid-menu .desserts__grid {
+    grid-area: desserts__grid;
+  }
+  .section-menu__grid-menu .button-grid {
+    grid-area: button-grid;
+    margin: auto;
   }
 }
 
