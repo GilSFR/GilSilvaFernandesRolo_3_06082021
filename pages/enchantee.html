@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         
-        <title>À la Française</title>
+        <title>La note enchantée</title>
     </head>
 <body>
 
@@ -23,7 +23,7 @@
         <a href="/index.html" class="header__arrow">
             <i class="fas fa-arrow-left"></i>
         </a>
-        <img src="/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="header__logo">
+        <img src="../images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class="header__logo">
     </header>
 
     <!-- ----------------------------------------------------------------------- -->
@@ -32,7 +32,7 @@
     <main>
 
         <!-- -------------------------------- Image -------------------------------- -->
-        <div class="card card__menu-palette card__img3">
+        <div class="card card__menu-palette card__menu-palette--menus card__img2">
         </div>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -41,7 +41,7 @@
         <article class="article">
             <div class="box-title">
                 <h1 class="heading-primary__h1--title">
-                    À la française
+                    La note enchantée
                 </h1>
             <!-- ------------------------ scss components/card ------------------------- -->
                 <div class="coeur__titre"> 
@@ -59,27 +59,27 @@
                         Entrées
                     </h2>
                     <!-- ------------------------------ Entrée 1 ------------------------------- -->
-                    <button href="#" class=" btn__menus menu-appears delay-1"> <!--u-flex-center-->
+                    <div class="btn__menus menu-appears delay-1">
                         <div class="heading-terciary__h3-para">
-                            <h3>Tartare de poulpe acidulé</h3>
-                            <p>Aux zestes d'orange</p>
+                            <h3>Ravioles de foie gras </h3>
+                            <p>Accompagnés de leur crème à la truffe</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
                                 25€
                             </p>
                         </div> 
-                       <div class="btn__menus--check">
-                            <div class=" btn__menus--white-circle">
+                        <div class="btn__menus--check">
+                            <div class="btn__menus--white-circle">
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
-                        </div>
-                    </button>
+                        </div> 
+                    </div>
                     <!-- ------------------------------ Entrée 2 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-2">
+                    <div class=" btn__menus menu-appears delay-2">
                         <div class="heading-terciary__h3-para">
-                            <h3>Velouté de légumes d'antan</h3>
-                            <p>Carotte, panais, topinambour</p>
+                            <h3>Caviar osciètre </h3>
+                            <p>Sur blini à la farine de blé noir</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -91,12 +91,12 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
+                    </div>
                     <!-- ------------------------------ Entrée 3 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-3">
+                    <div class="btn__menus menu-appears delay-3">
                         <div class="heading-terciary__h3-para">
-                            <h3>Soupe à l'oignon</h3>
-                            <p>Revisitée</p>
+                            <h3>Homard et espuma de potiron</h3>
+                            <p>Mariné aux zestes d'orange</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -108,37 +108,12 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
-                </div> 
-            <!-- ----------------------------------------------------------------------- -->
-            <!--                                  PLATS                                  -->
-            <!-- ----------------------------------------------------------------------- -->
-                <div class="plats__grid">
-                    <h2 class="heading-secondary__h2 heading-secondary__h2--menus ">
-                        Plats
-                    </h2>
-                    <!-- ------------------------------ Plat 1 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-4">
+                    </div>
+                    <!-- ------------------------------ Entrée 4 ------------------------------- -->
+                    <div class="btn__menus menu-appears delay-4">
                         <div class="heading-terciary__h3-para">
-                            <h3>Coquilles Saint-Jacques</h3>
-                            <p>Accompagnées d'une purée de panais</p>
-                        </div>
-                        <div class="btn__menus--prix">
-                            <p>
-                                40€
-                            </p>
-                        </div> 
-                        <div class="btn__menus--check">
-                            <div class=" btn__menus--white-circle">
-                                <i class="fas fa-check btn__menus--check-icon"></i>
-                            </div> 
-                        </div> 
-                    </button>
-                    <!-- ------------------------------ plat 2 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-5">
-                        <div class="heading-terciary__h3-para">
-                            <h3>Magret de canard</h3>
-                            <p>Et parmentier de pommes de terre</p>
+                            <h3>Foie gras de canard cuit entier</h3>
+                            <p>Confiture de figue et pain toasté</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -150,12 +125,54 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
-                    <!-- ------------------------------ plat 3 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-6">
+                    </div>
+                </div> 
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                                  PLATS                                  -->
+            <!-- ----------------------------------------------------------------------- -->
+                <div class="plats__grid">
+                    <h2 class="heading-secondary__h2 heading-secondary__h2--menus ">
+                        Plats
+                    </h2>
+                    <!-- ------------------------------ Plat 1 ------------------------------- -->
+                    <div class="btn__menus menu-appears delay-5">
                         <div class="heading-terciary__h3-para">
-                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                            <h3>Noix de coquilles Saint-Jacques</h3>
+                            <p>Sur lit de purée de céleri-rave</p>
+                        </div>
+                        <div class="btn__menus--prix">
+                            <p>
+                                40€
+                            </p>
+                        </div> 
+                        <div class="btn__menus--check">
+                            <div class=" btn__menus--white-circle">
+                                <i class="fas fa-check btn__menus--check-icon"></i>
+                            </div> 
+                        </div> 
+                    </div>
+                    <!-- ------------------------------ plat 2 ------------------------------- -->
+                    <div class="btn__menus menu-appears delay-6">
+                        <div class="heading-terciary__h3-para">
+                            <h3>Langoustine poêlée</h3>
+                            <p>Purée de patate douce</p>
+                        </div>
+                        <div class="btn__menus--prix">
+                            <p>
+                                35€
+                            </p>
+                        </div> 
+                        <div class="btn__menus--check">
+                            <div class=" btn__menus--white-circle">
+                                <i class="fas fa-check btn__menus--check-icon"></i>
+                            </div> 
+                        </div> 
+                    </div>
+                    <!-- ------------------------------ plat 3 ------------------------------- -->
+                    <div class="btn__menus menu-appears delay-7">
+                        <div class="heading-terciary__h3-para">
+                            <h3>Mijoté de queue de boeuf </h3>
+                            <p>Et riz sauvage aux zestes de citron</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -167,7 +184,7 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
+                    </div>
                 </div> 
                 <!-- ----------------------------------------------------------------------- -->
                 <!--                                  Desserts                                  -->
@@ -177,10 +194,10 @@
                         Desserts
                     </h2>
                     <!-- ------------------------------ dessert 1 -------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-7">
+                    <div class="btn__menus menu-appears delay-8">
                         <div class="heading-terciary__h3-para">
-                            <h3>Pétales de violettes glacés</h3>
-                            <p>Et purée de noisettes</p>
+                            <h3>Macaron noisette et chocolat</h3>
+                            <p>Glace au caramel brun et sel de Guérande</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -192,12 +209,12 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
+                    </div>
                     <!-- ------------------------------ dessert 2 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-8">
+                    <div class="btn__menus menu-appears delay-9">
                         <div class="heading-terciary__h3-para">
-                            <h3>Fondant au chocolat</h3>
-                            <p>Revisité</p>
+                            <h3>Baba au rhum revisité </h3>
+                            <p>Avec son coulis de citron</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -209,12 +226,12 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
+                    </div>
                     <!-- ------------------------------ dessert 3 ------------------------------- -->
-                    <button href="#" class="btn__menus menu-appears delay-9">
+                    <div class="btn__menus menu-appears delay-10">
                         <div class="heading-terciary__h3-para">
-                            <h3>Millefeuille croustillant</h3>
-                            <p>Myrtilles et pâte d’amande</p>
+                            <h3>Tarte au citron meringuée </h3>
+                            <p>Déstructurée</p>
                         </div>
                         <div class="btn__menus--prix">
                             <p>
@@ -226,9 +243,9 @@
                                 <i class="fas fa-check btn__menus--check-icon"></i>
                             </div> 
                         </div> 
-                    </button>
+                    </div>
                 </div>
-                <button href="#" class="btn btn__gradient  btn__gradient--menus button-grid">
+                <button class=" u-flex-center btn btn__gradient  btn__gradient--menus button-grid">
                     Commander
                 </button>
             </section>    

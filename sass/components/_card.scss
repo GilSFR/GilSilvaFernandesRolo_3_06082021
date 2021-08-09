@@ -16,21 +16,21 @@
     /* -------------------------- Card Background images ------------------------- */
 
     &__img1{
-        background-image: url("images\restaurants\mobile\La-palette-du-gout.jpg");
+        background-image: url("/images/restaurants/desktop/palette.jpg");
     }
     &__img2{
-        background-image: url("/images/restaurants/mobile/La-note-enchantée.jpg");
+        background-image: url("/images/restaurants/desktop/note.jpg");
         background-position: 50% 60%;
         
     }   
     &__img3{
-        background-image: url("./images/restaurants/mobile/A-la-Francaise.jpg");
+        background-image: url("/images/restaurants/desktop/francaise.jpg");
         p {
             display: none;
         }
     }
     &__img4{
-        background-image: url("../images/restaurants/mobile/Le-délisse-des-sens.jpg");
+        background-image: url("/images/restaurants/desktop/delisse.jpg");
         p {
             display: none;
         }
