@@ -32,7 +32,7 @@
   @keyframes check {
     from {
       visibility: visible;
-      width: 1rem;
+      width: 0rem;
     }
     to {
       width: 7rem ;
@@ -68,7 +68,7 @@
 @keyframes menu-appears {
   0% {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
   10%{
     opacity: 0;
@@ -89,9 +89,9 @@
   80%
   {
     opacity: 0.6;
-    transform: translateY(0rem)
   }
   100% {
+    transform: translateY(0rem);
     opacity: 1;
     
   }

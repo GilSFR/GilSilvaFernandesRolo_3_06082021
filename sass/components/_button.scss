@@ -39,6 +39,11 @@
         &--menus {
             width: 18rem;
             margin: 4rem auto;
+            @media screen and (max-width : 200px)
+            {
+                width: 14rem;
+                margin: 4rem auto;
+            }
         }
 
     }
@@ -70,77 +75,90 @@
     
     &__menus {
         display: flex;
-        justify-content: flex-start;
+        height: 6.4rem;
+        width: 100% ;
+        max-width: 38rem;
         background-color: $white;
         border-radius: 1.4rem;
         margin-bottom: 2rem;
-        padding: 0rem;
-        min-height: 6rem;
-        width: 100%;
-        max-width: 40rem;
         overflow: hidden;
+        box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 15%);
         @media screen and (min-width: 400px) {
+            width: 38rem;
+            margin: 1rem auto;
+        } 
+
+        @media screen and (min-width: 600px) {
+            width: 29rem;
+            margin: 1rem auto;
+        } 
+
+        @media screen and (min-width: 800px) {
+            width: 38rem;
+            margin: 1rem auto;
+        } 
+
+        @media screen and (min-width: 1100px) {
+            width: 50rem;
             margin: 2rem auto;
-            
-        }
+        } 
+        
         
         &:hover &--check {
-            animation: check .2s linear  forwards;
+            animation: check .3s linear  forwards;
             
         }
 
         &:hover &--check-icon {
-            animation: rotate .2s linear forwards;
+            animation: rotate .3s linear forwards;
             
         }
 
-        &:hover &--prix {
-            animation : prix .3s forwards;
+        &:hover {
+            box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 30%);
         }
 
         &--prix {
             display: flex;
             align-items: flex-end;
-            justify-content: center;
-            font-size: 1.3rem;
-            height: 3.2rem;
-            padding-right: 2rem;
-            width: 3.95rem;
-            transform: translateX(3rem);
-            @media screen and (max-width: 300px) { 
-                padding-right: 0%;
-                transform: translateX(0.5rem);
-            }
+            padding: 1rem;
+            height: 6.4rem;
+            line-height: 1.5;
+            font-weight: bold;
         }
 
         &--check {
-            position: relative;
+
+            // position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 0rem;
-            min-height: 6.5rem;
+            height: 6.4rem;
             background-color: $tertiaire;
             transition: all .2s;
-
+            border-bottom: 2px solid $tertiaire;
             @media screen and (max-width: 300px) { 
-                height: 8rem;
+                height: 7rem;
             }
         }
 
         &--white-circle {
-            width:20px;
-            height: 20px;
+            display: inline-block;
+            width:25px;
+            height: 25px;
+            line-height: 2;
             border-radius: 50%;
             background-color: white;
+            
         }
 
         &--check-icon {
             font-size: 1.3rem;
             visibility: hidden;
-            position: absolute;
-            top: 2.7rem;
-            left: 2.4rem;
+            //position: absolute;
+            //top: 2.7rem;
+            //left: 2.4rem;
             color: $tertiaire;
             @media screen and (max-width: 300px) { 
                 top: 3.3rem;
@@ -179,6 +197,7 @@
     &__paragraphe {
         width:17rem;
     }
+
 
 }
 

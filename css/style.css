@@ -36,7 +36,7 @@
 @keyframes check {
   from {
     visibility: visible;
-    width: 1rem;
+    width: 0rem;
   }
   to {
     width: 7rem;
@@ -67,7 +67,7 @@
 @keyframes menu-appears {
   0% {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
   }
   10% {
     opacity: 0;
@@ -83,9 +83,9 @@
   }
   80% {
     opacity: 0.6;
-    transform: translateY(0rem);
   }
   100% {
+    transform: translateY(0rem);
     opacity: 1;
   }
 }
@@ -217,6 +217,12 @@ body {
   width: 18rem;
   margin: 4rem auto;
 }
+@media screen and (max-width: 200px) {
+  .btn__gradient--menus {
+    width: 14rem;
+    margin: 4rem auto;
+  }
+}
 .btn__default {
   background-color: #f6f6f6;
   border-radius: 1.4rem;
@@ -241,73 +247,82 @@ body {
 }
 .btn__menus {
   display: flex;
-  justify-content: flex-start;
+  height: 6.4rem;
+  width: 100%;
+  max-width: 38rem;
   background-color: #FFF;
   border-radius: 1.4rem;
   margin-bottom: 2rem;
-  padding: 0rem;
-  min-height: 6rem;
-  width: 100%;
-  max-width: 40rem;
   overflow: hidden;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 400px) {
   .btn__menus {
+    width: 38rem;
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .btn__menus {
+    width: 29rem;
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .btn__menus {
+    width: 38rem;
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .btn__menus {
+    width: 50rem;
     margin: 2rem auto;
   }
 }
 .btn__menus:hover .btn__menus--check {
-  animation: check 0.2s linear forwards;
+  animation: check 0.3s linear forwards;
 }
 .btn__menus:hover .btn__menus--check-icon {
-  animation: rotate 0.2s linear forwards;
+  animation: rotate 0.3s linear forwards;
 }
-.btn__menus:hover .btn__menus--prix {
-  animation: prix 0.3s forwards;
+.btn__menus:hover {
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 .btn__menus--prix {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  font-size: 1.3rem;
-  height: 3.2rem;
-  padding-right: 2rem;
-  width: 3.95rem;
-  transform: translateX(3rem);
-}
-@media screen and (max-width: 300px) {
-  .btn__menus--prix {
-    padding-right: 0%;
-    transform: translateX(0.5rem);
-  }
+  padding: 1rem;
+  height: 6.4rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 .btn__menus--check {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 0rem;
-  min-height: 6.5rem;
+  height: 6.4rem;
   background-color: #99e2d0;
   transition: all 0.2s;
+  border-bottom: 2px solid #99e2d0;
 }
 @media screen and (max-width: 300px) {
   .btn__menus--check {
-    height: 8rem;
+    height: 7rem;
   }
 }
 .btn__menus--white-circle {
-  width: 20px;
-  height: 20px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 2;
   border-radius: 50%;
   background-color: white;
 }
 .btn__menus--check-icon {
   font-size: 1.3rem;
   visibility: hidden;
-  position: absolute;
-  top: 2.7rem;
-  left: 2.4rem;
   color: #99e2d0;
 }
 @media screen and (max-width: 300px) {
@@ -401,6 +416,7 @@ body {
   font-size: 1.5rem;
   font-family: "roboto";
   font-weight: normal;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .heading-secondary__h2--menus::after {
@@ -424,13 +440,13 @@ body {
 .heading-terciary__h3-para {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  width: 80%;
+  flex: 1;
+  gap: 0.8rem;
+  padding: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.8rem;
   text-align: left;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
 }
 .heading-terciary__h3-para h3 {
@@ -439,7 +455,6 @@ body {
   overflow: hidden;
 }
 .heading-terciary__h3-para p {
-  text-align: left;
   font-size: 1.4rem;
   font-family: "roboto-light";
   font-weight: 200;
@@ -555,6 +570,7 @@ body {
 @media screen and (min-width: 1600px) {
   .coeur__titre {
     width: 3%;
+    padding-left: 10rem;
   }
 }
 .coeur__vide {
@@ -808,13 +824,6 @@ body {
     padding: 0.8rem 1rem;
   }
 }
-@media screen and (min-width: 1200px) {
-  .article {
-    max-width: 100%;
-    margin-top: 0rem;
-    padding: 0.8rem 1rem;
-  }
-}
 
 .box-title {
   display: flex;
@@ -827,7 +836,6 @@ body {
   .box-title {
     text-align: center;
     max-width: 100%;
-    margin-bottom: 0rem;
   }
 }
 
