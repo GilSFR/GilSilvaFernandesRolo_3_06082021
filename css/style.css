@@ -6,6 +6,19 @@
 /* ---------------------------------- SIZES --------------------------------- */
 /* --------------------------------- QUERIES -------------------------------- */
 /* --------------------------- Loader page accueil -------------------------- */
+@-webkit-keyframes white_page {
+  0% {
+    visibility: visible;
+    opacity: 0.95;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes white_page {
   0% {
     visibility: visible;
@@ -16,6 +29,19 @@
   }
   100% {
     opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    box-shadow: 0 0 0 0 #9356DC;
+    visibility: visible;
+  }
+  70% {
+    box-shadow: 0 0 0 50px #ff79DA;
+  }
+  100% {
+    box-shadow: 0 0 0 100px rgba(168, 63, 57, 0);
     visibility: hidden;
   }
 }
@@ -33,6 +59,15 @@
   }
 }
 /* ----------------- check the button on hover in the menus ----------------- */
+@-webkit-keyframes check {
+  from {
+    visibility: visible;
+    width: 0rem;
+  }
+  to {
+    width: 7rem;
+  }
+}
 @keyframes check {
   from {
     visibility: visible;
@@ -42,12 +77,33 @@
     width: 7rem;
   }
 }
+@-webkit-keyframes prix {
+  from {
+    transform: translateX(3rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
 @keyframes prix {
   from {
     transform: translateX(3rem);
   }
   to {
     transform: translateX(0rem);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    visibility: visible;
+    transform: rotate(-360deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+    visibility: visible;
   }
 }
 @keyframes rotate {
@@ -64,6 +120,31 @@
   }
 }
 /* -------------------------- Menu Appears in menus ------------------------- */
+@-webkit-keyframes menu-appears {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
 @keyframes menu-appears {
   0% {
     opacity: 0;
@@ -91,47 +172,72 @@
 }
 .menu-appears {
   opacity: 0;
-  animation: menu-appears 0.5s ease-in 0s forwards;
+  -webkit-animation: menu-appears 0.5s ease-in 0s forwards;
+          animation: menu-appears 0.5s ease-in 0s forwards;
 }
 
 delay-1 {
-  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .delay-2 {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .delay-3 {
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .delay-4 {
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .delay-5 {
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .delay-6 {
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .delay-7 {
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
 }
 
 .delay-8 {
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .delay-9 {
-  animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .delay-10 {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes coeur {
+  0% {
+    transform: scale(0);
+    transform-origin: bottom center;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    transform: scale(1.07);
+    visibility: visible;
+  }
 }
 
 @keyframes coeur {
@@ -174,19 +280,19 @@ body {
 
 @font-face {
   font-family: "Shrikhand-Regular";
-  src: url("/fonts/Logo&titles/Shrikhand-Regular.ttf");
+  src: url("/fonts/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "roboto-light";
-  src: url("/fonts/Texte/Roboto-Light.ttf");
+  src: url("/fonts/Roboto-Light.ttf");
   font-family: "roboto-thin";
-  src: url("/fonts/Texte/Roboto-Thin.ttf");
+  src: url("/fonts/Roboto-Thin.ttf");
   font-family: "roboto";
-  src: url("/fonts/Texte/Roboto-Regular.ttf");
+  src: url("/fonts/Roboto-Regular.ttf");
   font-family: "roboto-bold";
-  src: url("/fonts/Texte/Roboto-Bold.ttf");
+  src: url("/fonts/Roboto-Bold.ttf");
   font-family: "roboto-black";
-  src: url("/fonts/Texte/Roboto-Black.ttf");
+  src: url("/fonts/Roboto-Black.ttf");
 }
 .u-flex-center {
   display: flex;
@@ -294,10 +400,12 @@ body {
   }
 }
 .btn__menus:hover .btn__menus--check {
-  animation: check 0.3s linear forwards;
+  -webkit-animation: check 0.3s linear forwards;
+          animation: check 0.3s linear forwards;
 }
 .btn__menus:hover .btn__menus--check-icon {
-  animation: rotate 0.3s linear forwards;
+  -webkit-animation: rotate 0.3s linear forwards;
+          animation: rotate 0.3s linear forwards;
 }
 .btn__menus:hover {
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
@@ -405,6 +513,8 @@ body {
 }
 @media screen and (min-width: 600px) {
   .heading-primary__h1--title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: 40%;
   }
@@ -629,9 +739,12 @@ body {
   -webkit-text-stroke: 1px black;
 }
 .fa-heart--vide:hover + .fa-heart--plein {
-  animation-name: coeur;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: coeur;
+          animation-name: coeur;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .loader {
@@ -645,7 +758,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: 3;
-  animation: white_page 3s linear;
+  -webkit-animation: white_page 3s linear;
+          animation: white_page 3s linear;
   visibility: hidden;
   /* Circle animation pulse and colors */
 }
@@ -660,7 +774,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: loader 1s linear 3;
+  -webkit-animation: loader 1s linear 3;
+          animation: loader 1s linear 3;
   z-index: 2;
   visibility: hidden;
 }
@@ -869,7 +984,7 @@ body {
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "entrees__grid plats__grid" "desserts__grid button-grid";
-  }
+}}  }
   .section-menu__grid-menu .entrees__grid {
     grid-area: entrees__grid;
   }
