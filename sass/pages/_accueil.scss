@@ -5,6 +5,20 @@
 .section-paris { 
     background-color: #eaeaea;
 
+    &__paragraphe-box {
+        width: 12rem;
+    }
+
+    &__input {
+        background-color: inherit;
+        font-size: $font-size;
+        border: none;
+        outline: none;
+        &::placeholder{
+            color: $black;
+        }
+    }
+
     &__group {
         font-size: $font-size;
         height: 3.5rem;
