@@ -15,7 +15,22 @@
         height: 1.5rem;
         margin-right: 0.8rem;
     }
+
+    &__paragraphe-box{
+        padding-left: 1rem;
+        width: 13rem;
+        &--input{
+        background-color: #eaeaea;
+        border:none;
+        outline: none;
+        font-size: $font-size;
+            &::placeholder{
+                color: black;
+            }
+        }
+     }
 }
+
 
 /*  */
 /*                               Section Explore                              */
