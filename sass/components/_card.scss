@@ -87,13 +87,17 @@
 /* ---------------------------- Texte sous image ---------------------------- */
     &__mix-box {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         color: black;
+
+        position: relative;
+
+
 
         &--text {
             display: flex;
             flex-direction: column;
-            height: 6rem;
+            //height: 5rem;
             padding-left: 1.5rem;
 
             @media screen and (max-width: 200px) { 

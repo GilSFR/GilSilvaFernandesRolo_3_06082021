@@ -17,10 +17,11 @@
 }
 
 .box-title{
+    position: relative;
     display: flex;
     justify-self: start;
     width: 100%;
-    max-width: 40rem;
+    //max-width: 40rem;
     margin-bottom: 3rem;
     
     @media screen and (min-width: 600px) { 
