@@ -483,7 +483,7 @@ body {
   background-image: url("/images/desktop-palette.jpg");
 }
 .palette--mobile {
-  background-image: url("images/mobile-palette.jpg");
+  background-image: url("/images/mobile-palette.jpg");
 }
 
 .note {
