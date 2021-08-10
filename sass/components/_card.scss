@@ -3,20 +3,8 @@
 
 /* ---------------------- TESTES DE BACkGROUND A EFFACER --------------------- */
 
-.palette{
-    &--desktop{
-        background-image: url("/images/desktop-palette.jpg");
-    }
-    &--mobile{
-        background-image: url("/images/mobile-palette.jpg");
-    }
-    
-}
-.note{
-    background-image: url("/images/desktop-note.jpg");
-    background-position: 50% 60%;
-}
-
+.palette{background-image: url("../images/desktop-palette.jpg");}
+   
 
 .card {
     position: relative;
@@ -33,36 +21,36 @@
     /* -------------------------- Card Background images ------------------------- */
 
     &__img1{
-        background-image: url("/images/desktop-palette.jpg");
+        background-image: url("../images/desktop-palette.jpg");
         &--mobile{
-            background-image: url("images/mobile-palette.jpg");
+            background-image: url("../images/mobile-palette.jpg");
         }
     }
     
     &__img2{
-        background-image: url("images/desktop-note.jpg");
+        background-image: url("../images/desktop-note.jpg");
         background-position: 50% 60%;
         &--mobile{
-            background-image: url("images/mobile-note.jpg");
+            background-image: url("../images/mobile-note.jpg");
         }
         
     }   
     &__img3{
-        background-image: url("images/desktop-francaise.jpg");
+        background-image: url("../images/desktop-francaise.jpg");
         p {
             display: none;
         }
         &--mobile{
-            background-image: url("images/mobile-francaise.jpg");
+            background-image: url("../images/mobile-francaise.jpg");
         }
     }
     &__img4{
-        background-image: url("images/desktop-delisse.jpg");
+        background-image: url("../images/desktop-delisse.jpg");
         p {
             display: none;
         }
         &--mobile{
-            background-image: url("images/mobile-delice.jpg");
+            background-image: url("../images/mobile-delice.jpg");
         }
     }
     
