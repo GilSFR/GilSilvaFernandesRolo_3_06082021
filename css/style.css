@@ -320,7 +320,6 @@ body {
   height: 6.4rem;
   background-color: #99e2d0;
   transition: all 0.2s;
-  border-bottom: 2px solid #99e2d0;
 }
 @media screen and (max-width: 300px) {
   .btn__menus--check {
@@ -479,6 +478,19 @@ body {
 }
 
 /* ---------------------------------- Card ---------------------------------- */
+/* ---------------------- TESTES DE BACkGROUND A EFFACER --------------------- */
+.palette--desktop {
+  background-image: url("/images/desktop-palette.jpg");
+}
+.palette--mobile {
+  background-image: url("images/mobile-palette.jpg");
+}
+
+.note {
+  background-image: url("/images/desktop-note.jpg");
+  background-position: 50% 60%;
+}
+
 .card {
   position: relative;
   width: 100%;
@@ -500,32 +512,32 @@ body {
   background-image: url("/images/desktop-palette.jpg");
 }
 .card__img1--mobile {
-  background-image: url("/images/mobile-palette.jpg");
+  background-image: url("images/mobile-palette.jpg");
 }
 .card__img2 {
-  background-image: url("/images/desktop-note.jpg");
+  background-image: url("images/desktop-note.jpg");
   background-position: 50% 60%;
 }
 .card__img2--mobile {
-  background-image: url("/images/mobile-note.jpg");
+  background-image: url("images/mobile-note.jpg");
 }
 .card__img3 {
-  background-image: url("/images/desktop-francaise.jpg");
+  background-image: url("images/desktop-francaise.jpg");
 }
 .card__img3 p {
   display: none;
 }
 .card__img3--mobile {
-  background-image: url("/images/mobile-francaise.jpg");
+  background-image: url("images/mobile-francaise.jpg");
 }
 .card__img4 {
-  background-image: url("/images/desktop-delisse.jpg");
+  background-image: url("images/desktop-delisse.jpg");
 }
 .card__img4 p {
   display: none;
 }
 .card__img4--mobile {
-  background-image: url("/images/mobile-delice.jpg");
+  background-image: url("images/mobile-delice.jpg");
 }
 .card__menu-palette {
   width: 100%;
@@ -729,9 +741,9 @@ body {
   color: #ffffff;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                                section-paris                               */
-/* -------------------------------------------------------------------------- */
+/*  */
 .section-paris {
   background-color: #eaeaea;
 }
@@ -745,9 +757,9 @@ body {
   margin-right: 0.8rem;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                               Section Explore                              */
-/* -------------------------------------------------------------------------- */
+/*  */
 .section-explore {
   display: flex;
   justify-content: center;
@@ -758,9 +770,9 @@ body {
   background-color: #f6f6f6;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                           Section fonctionnement                           */
-/* -------------------------------------------------------------------------- */
+/*  */
 .section-fonctionement {
   display: flex;
   justify-content: center;
@@ -770,10 +782,10 @@ body {
   gap: 2rem;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                             Section restaurants                            */
-/* -------------------------------------------------------------------------- */
-/* ----------------------------- components//card --------------------------- */
+/*  */
+/*  components//card  */
 .section-restaurants {
   display: flex;
   justify-content: center;
@@ -808,7 +820,7 @@ body {
   }
 }
 
-/* --------------------------- articles Restaurant -------------------------- */
+/*  articles Restaurant  */
 .article-restaurant {
   height: 20rem;
   width: 100%;

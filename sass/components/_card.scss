@@ -1,6 +1,23 @@
 
 /* ---------------------------------- Card ---------------------------------- */
 
+/* ---------------------- TESTES DE BACkGROUND A EFFACER --------------------- */
+
+.palette{
+    &--desktop{
+        background-image: url("/images/desktop-palette.jpg");
+    }
+    &--mobile{
+        background-image: url("images/mobile-palette.jpg");
+    }
+    
+}
+.note{
+    background-image: url("/images/desktop-note.jpg");
+    background-position: 50% 60%;
+}
+
+
 .card {
     position: relative;
     width: 100%;
@@ -16,7 +33,7 @@
     /* -------------------------- Card Background images ------------------------- */
 
     &__img1{
-        background-image: url("images/desktop-palette.jpg");
+        background-image: url("/images/desktop-palette.jpg");
         &--mobile{
             background-image: url("images/mobile-palette.jpg");
         }

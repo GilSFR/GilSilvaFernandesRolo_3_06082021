@@ -1,6 +1,6 @@
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                                section-paris                               */
-/* -------------------------------------------------------------------------- */
+/*  */
 
 .section-paris { 
     background-color: #eaeaea;
@@ -17,35 +17,35 @@
     }
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                               Section Explore                              */
-/* -------------------------------------------------------------------------- */
+/*  */
 
 .section-explore {
     @include flexCenter-section;
     background-color: $grey-background;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                           Section fonctionnement                           */
-/* -------------------------------------------------------------------------- */
+/*  */
 
 .section-fonctionement {
     @include flexCenter-section;
 }
 
-/* -------------------------------------------------------------------------- */
+/*  */
 /*                             Section restaurants                            */
-/* -------------------------------------------------------------------------- */
+/*  */
 
-/* ----------------------------- components//card --------------------------- */
+/*  components//card  */
 .section-restaurants{
     @include flexCenter-section;
     @include grid-accueil-restaurants;
     background-color: $grey-background;
 }
 
-/* --------------------------- articles Restaurant -------------------------- */
+/*  articles Restaurant  */
 
 .article-restaurant {
     height: 20rem;
