@@ -10,6 +10,7 @@
 .coeur__box{
     display: flex;
     
+    
     &--accueil {
         position: absolute;
         top: 5.5rem;
@@ -22,6 +23,9 @@
         right: 2.5rem;
         @media screen and (max-width : 475px) {
             right: 1.5rem;
+        }
+        @media screen and (max-width : 320px) {
+           right: 0;
         }
     }
 }

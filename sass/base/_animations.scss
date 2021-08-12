@@ -178,9 +178,9 @@ delay-1 {
 @keyframes coeur {
   0%
   {
+    transform: scale(0);
     transform-origin: bottom center;
     visibility: visible;
-    transform: scale(0);
   }
   100%
   {
