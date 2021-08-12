@@ -132,10 +132,13 @@ delay-1 {
 
 .delay-10 {
   animation-delay: 2s;
+<<<<<<< HEAD
+=======
 }
 
 @keyframes coeur {
   0% {
+    visibility: visible;
     transform: scale(0);
     transform-origin: bottom center;
   }
@@ -143,8 +146,17 @@ delay-1 {
     visibility: visible;
   }
   100% {
-    transform: scale(1.07);
+    transform: scale(1);
     visibility: visible;
+  }
+>>>>>>> main
+}
+@keyframes coeur-off {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 * {
@@ -174,19 +186,19 @@ body {
 
 @font-face {
   font-family: "Shrikhand-Regular";
-  src: url("/fonts/Shrikhand-Regular.ttf");
+  src: url("../fonts/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "roboto-light";
-  src: url("/fonts/Roboto-Light.ttf");
+  src: url("../fonts/Roboto-Light.ttf");
   font-family: "roboto-thin";
-  src: url("/fonts/Roboto-Thin.ttf");
+  src: url("../fonts/Roboto-Thin.ttf");
   font-family: "roboto";
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto-Regular.ttf");
   font-family: "roboto-bold";
-  src: url("/fonts/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto-Bold.ttf");
   font-family: "roboto-black";
-  src: url("/fonts/Roboto-Black.ttf");
+  src: url("/..fonts/Roboto-Black.ttf");
 }
 .u-flex-center {
   display: flex;
@@ -617,8 +629,10 @@ body {
   color: transparent;
   -webkit-text-stroke: 2px linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
   background: linear-gradient(175deg, #ff79da 0%, #ff79da 10%, #9356dc 60%);
+  -webkit-background-clip: border-box;
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   visibility: hidden;
 }
 .fa-heart--vide {
@@ -632,6 +646,12 @@ body {
   animation-name: coeur;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+<<<<<<< HEAD
+=======
+}
+.fa-heart--vide:hover {
+  animation: coeur-off 0.3s 0.2s forwards;
+>>>>>>> main
 }
 
 .loader {
@@ -738,6 +758,18 @@ body {
 /*  */
 .section-paris {
   background-color: #eaeaea;
+}
+.section-paris__paragraphe-box {
+  width: 12rem;
+}
+.section-paris__input {
+  background-color: inherit;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+}
+.section-paris__input::placeholder {
+  color: #000;
 }
 .section-paris__group {
   font-size: 1.5rem;
