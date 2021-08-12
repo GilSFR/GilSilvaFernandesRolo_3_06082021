@@ -1,7 +1,14 @@
-/* ------------------------------- Icon coeur ------------------------------- */
+// =====================================================================================================================================================================================================================================================================================
+//  III   CCC    OOO   N   N        CCC    OOO   EEEEE  U   U  RRRR
+//   I   C   C  O   O  NN  N       C   C  O   O  E      U   U  R   R
+//   I   C      O   O  N N N       C      O   O  EEE    U   U  R   R
+//   I   C      O   O  N  NN       C      O   O  E      U   U  RRRR
+//   I   C   C  O   O  N   N       C   C  O   O  E      U   U  R  R
+//  III   CCC    OOO   N   N        CCC    OOO   EEEEE   UUU   R   R
+// =====================================================================================================================================================================================================================================================================================
+// * * * Icon coeur
 .coeur__box{
     display: flex;
-    
     
     &--accueil {
         position: absolute;
@@ -17,7 +24,6 @@
             right: 1.5rem;
         }
     }
-    
 }
 
 .fa-heart{
@@ -28,12 +34,14 @@
         bottom: 15px;
         right: 20px;
         color: transparent;
-        -webkit-text-stroke: 2px $gradient; //linear-gradient(#FF79DA , #9356dc)
-        background: $gradient;  
-        -webkit-background-clip: border-box;
-        -webkit-background-clip: text;
+        background: $gradient; 
         background-clip: text;
-        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        color: transparent; 
+        // -webkit-background-clip: border-box;
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // -webkit-text-fill-color:transparent;
         visibility: hidden;
     }
 
@@ -51,9 +59,5 @@
         &:hover {
             animation: coeur-off .3s .2s forwards;
         }
-        
     }
-
-    
-
 }
