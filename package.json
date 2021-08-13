@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/GilSFR/ohMyFood#readme",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.37.5"
   }
 }
