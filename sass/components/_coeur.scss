@@ -39,13 +39,13 @@
         right: 20px;
         color: transparent;
         background: $gradient; 
-        background-clip: text;
+        background-clip: border-box;
         -webkit-background-clip: text;
         color: transparent; 
         // -webkit-background-clip: border-box;
         // -webkit-background-clip: text;
         // background-clip: text;
-        // -webkit-text-fill-color:transparent;
+        -webkit-text-fill-color:transparent;
         visibility: hidden;
     }
 
