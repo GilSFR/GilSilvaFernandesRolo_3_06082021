@@ -85,14 +85,6 @@
                 background-color: $tertiaire;
                 bottom: -4px;
             }
-
-            @media screen and (min-width: 1200px){
-                text-align: center;
-                
-                &::after {
-                    display: none;
-                }
-            }
         }
     }
 }

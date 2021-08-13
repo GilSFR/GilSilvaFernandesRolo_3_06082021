@@ -64,12 +64,36 @@
         
     }
     @media screen and (min-width: 600px){
+        margin: auto;
         display: grid ; 
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "entrees__grid plats__grid"
         "desserts__grid button-grid";
+
+        .entrees__grid {
+            grid-area: entrees__grid;
+        }
+        .plats__grid {
+            grid-area: plats__grid;
+        }
+        .desserts__grid {
+            grid-area: desserts__grid;
+        }
+        .button-grid {
+            grid-area: button-grid;
+            margin: auto;
+        }
+    } 
+    @media screen and (min-width: 1000px){
+        margin: auto;
+        display: grid ; 
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "entrees__grid plats__grid desserts__grid"
+        ". button-grid .";
 
         .entrees__grid {
             grid-area: entrees__grid;

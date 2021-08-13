@@ -58,6 +58,10 @@
                 width: 14rem;
                 margin: 4rem auto;
             }
+            @media screen and (min-width : 1000px)
+            {
+                width: 20rem;
+            }
         }
 
     }
@@ -99,31 +103,27 @@
         display: flex;
         height: 6.4rem;
         width: 100% ;
-        max-width: 38rem;
+        //max-width: 38rem;
         background-color: #ffffff;
         border-radius: 1.4rem;
         margin-bottom: 2rem;
         overflow: hidden;
         box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 15%);
-        @media screen and (min-width: 400px) {
-            width: 38rem;
+
+
+
+        @media screen and (max-width: 400px) {
+            width: 100%;
             margin: 1rem auto;
         } 
 
         @media screen and (min-width: 600px) {
-            width: 29rem;
-            margin: 1rem auto;
-        } 
-
-        @media screen and (min-width: 800px) {
-            width: 38rem;
-            margin: 1rem auto;
+            width: 28rem;
         } 
 
         @media screen and (min-width: 1100px) {
-            width: 50rem;
-            margin: 2rem auto;
-        }
+            width: 32rem;
+            } 
         
         &:hover &--check {
             animation: check .3s linear  forwards;
