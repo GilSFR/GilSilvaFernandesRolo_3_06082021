@@ -20,7 +20,7 @@
 
     &:hover,
     &:active {
-        background-color: #f5edff;
+        background-color: lighten($grey-background, 15%);
         box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 50%);
     }
 
@@ -137,7 +137,6 @@
 
         &:hover {
             box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 30%);
-            background-color: #f5edff;
         }
 
         &--prix {

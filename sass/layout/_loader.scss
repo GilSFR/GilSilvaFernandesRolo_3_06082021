@@ -8,7 +8,7 @@
 // =============================================================================================================================================================================================================================================================
 // * * * Loader
 .loader{
-    /* here the background color opacitiy and visibility timing */
+    /* Couleur de background  en fixed*/
 	height: 100%;
     background: white;
     margin: auto;
@@ -18,7 +18,7 @@
     animation: white_page 3s linear ;
     visibility: hidden;
     
-    /* Circle animation pulse and colors */
+    /* le cercle de couleur qui pulse */
 	&__animation{
 		border-radius: 50%;
         width: 50px;
